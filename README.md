@@ -69,9 +69,9 @@ After this Kafka will be able to go ahead and create the following file structur
 
 ```bash
 apps/
-└── gmail
+└── gmail/
     ├── index.js
-    └── actions
+    └── actions/
         └── send_email.js
 ```
 
@@ -131,13 +131,3 @@ The function should take the following arguments: sender, receiver, body and sub
 Following this Kafka will go ahead and modify the correct section of `apps/gmail/actions/send_email.js`.
 
 Talking through it, you can iterate Kafka to a point where you're satisfied with the output.
-
-
-### Notes on the README
-
-- **Prerequisites**: This section ensures that the user has Node.js installed, which is necessary to run the script.
-- **Installation**: Detailed steps guide the user through getting the project set up on their local machine.
-- **Making the Script Executable and Linking the Package**: These instructions are crucial for setting up the script so it can be run with `npx`.
-- **Usage**: Provides clear commands for how to run the application, both locally and globally.
-- **Contributing**: Encourages others to contribute to the project.
-- **License**: It's good practice to include a license; MIT is a common choice for open source.
