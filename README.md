@@ -2,6 +2,12 @@
 
 This assignment requires you to create the Brainbase Kafka internal AI worker.
 
+## Introduction
+
+At Brainbase, we work on a lot of fun and exciting things. Unfortunately, creating integrations isn't one of them, but it is something that has to get done, so we want to make it as easy on ourselves as possible.
+
+Your first task at Brainbase is to follow our motto and *make yourself useless.* by making an AI worker that can take over this integration creation from you, so you can work on better things that actually excite you.
+
 ## Installing the template
 
 ### Prerequisites
@@ -106,7 +112,10 @@ For the last milestone, you need to allow Kafka to **modify** the created files.
 #### Criteria
 - [ ] Function `modify_file` is created. This function replaces a certain line range in a file with the provided code segment.
 - [ ] Function `read_web_page` is created. This is used to allow reading the text content from a provided url for the documentation.
-- [ ] Kafka can use these functions to implement the run part of the 
+- [ ] Kafka can use these functions to implement the `run` method of the created action in the file according to documentation.
 
 ## Final run
 Once all three milestones are succesfully completed, you should now have an AI worker that you can have a conversation with and have it create integrations in the boilerplate format!
+
+## Notes
+The important thing here isn't that Kafka is able to perfectly create every integration without any manual intevention, it is that creating integrations with Kafka is faster and overall a better experience than us creating them from scratch. This symbiosis is what we strive to provide our customers with Brainbase as well.
