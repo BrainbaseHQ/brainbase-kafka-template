@@ -100,80 +100,13 @@ apps/
 ```
 is created. `index.js` should have the **exact** content of of `/boilerplate/index.js` and `actions/<action_name>.js` should have the **exact** content of `/boilerplate/actions/<action_name>.js`.
 
+### Milestone 3: URL parsing and file modification
+For the last milestone, you need to allow Kafka to **modify** the created files.
 
-Kafka provides a chat interface for you to explain what integration you want it to create and to nudge it along the way.
+#### Criteria
+- [ ] Function `modify_file` is created. This function replaces a certain line range in a file with the provided code segment.
+- [ ] Function `read_web_page` is created. This is used to allow reading the text content from a provided url for the documentation.
+- [ ] Kafka can use these functions to implement the run part of the 
 
-Upon start, you can tell Kafka something like the following:
-
-```bash
-I want you to create the send_email action for the gmail app. The output of the action should have the id of the email sent and the thread id.
-```
-
-Following this Kafka will ask you to provide the necessary documentation or the URL to the documentation.
-
-After this Kafka will be able to go ahead and create the following file structure:
-
-```bash
-apps/
-└── gmail/
-    ├── index.js
-    └── actions/
-        └── send_email.js
-```
-
-Kafka will also fill in these files with the boilerplate code for the necessary files:
-
-```javascript
-// apps/gmail/index.js
-const { action_1 } = require('/actions/action_1.js');
-
-export const app = {
-    name: 'gmail',
-    displayName: 'Gmail',
-    authors: ['Kafka'],
-    actions: [
-        action1
-    ]
-};
-```
-
-```javascript
-// apps/gmail/actions/send_email.js
-const send_email = {
-    name: 'send_email',
-    description: 'Sends an email',
-    displayName: 'Send email',
-    outputSchema: {
-        type: 'object',
-        properties: {
-            email_id: {
-                type: 'string',
-                displayName: 'Id of email'
-            },
-            thread_id: {
-                type: 'string',
-                displayName: 'Id of thread'
-            },
-        },
-    },
-    props: {
-    },
-    async run({ auth, props }) {
-    },
-
-};
-
-module.exports = {
-    send_email,
-};
-```
-
-Here these files will be bare or very fleshed out based on how much information you already supplied Kafka at the beginning. Here we see that we didn't tell Kafka anything about the input props that this function needs to take, so we can say:
-
-```bash
-The function should take the following arguments: sender, receiver, body and subject
-```
-
-Following this Kafka will go ahead and modify the correct section of `apps/gmail/actions/send_email.js`.
-
-Talking through it, you can iterate Kafka to a point where you're satisfied with the output.
+## Final run
+Once all three milestones are succesfully completed, you should now have an AI worker that you can have a conversation with and have it create integrations in the boilerplate format!
