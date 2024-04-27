@@ -87,7 +87,8 @@ For Milestone 2, you need to allow your basic chat app from Milestone 1 to creat
 5.     displayName: '<APP_NAME>', // e.g. 'Google Calendar'
 6.     authors: ['Kafka'],
 7. ...
-``` **This is very important for the next milestone.**
+```
+**This is very important for the next milestone.**
 - [ ] The necessary functions are created as [tools](https://platform.openai.com/docs/guides/function-calling)  
 - [ ] The file structure:
 ```bash
