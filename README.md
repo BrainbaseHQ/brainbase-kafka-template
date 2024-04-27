@@ -1,8 +1,8 @@
-# Brainbase Kafka
+# Brainbase Kafka Template
 
-Kafka is an internal AI worker for Brainbase that helps with creating integrations.
+This assignment requires you to create the Brainbase Kafka internal AI worker.
 
-## Installing Kafka
+## Installing the template
 
 ### Prerequisites
 
@@ -53,7 +53,33 @@ node main.js
 
 To exit the chat, simply type `exit` and hit enter. The application will close.
 
-## Using Kafka
+## Components
+
+The assignment has the following components:
+
+- `main.js`: Primary part where the terminal chat application runs
+- `functions.js`: Some utility functions that need to be implemented for Kafka to be able to interact with the file system (feel free to add more functions as you need)
+- `log_utils.js`: Some utility functions for logs (no need to touch)
+- `/boilerplate`: This is what an application code should look like
+
+## Milestones
+
+**This is a challenging assignment.** Therefore you're given the following milestones that get progressively more difficult, and provide necessary structure for how to implement the entire system.
+
+### Milestone 1: Terminal Chat
+For Milestone 1, all you need to do is connect the provided application to the OpenAI GPT-4 API to create a lite version of ChatGPT on the terminal. **No function calling or streaming necessary.**
+
+#### Criteria
+- [ ] The OpenAI API is successfully set up.
+- [ ] The system is able to keep a conversation going.
+
+### Milestone 2: Basic file tasks
+For Milestone 2, you need to allow your basic chat app from Milestone 1 to create the correct file structure for a new app based on user instruction.
+
+#### Criteria
+- [ ] The OpenAI API is successfully set up.
+- [ ] The system is able to keep a conversation going.
+
 
 Kafka provides a chat interface for you to explain what integration you want it to create and to nudge it along the way.
 
