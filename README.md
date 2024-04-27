@@ -6,7 +6,7 @@ This assignment requires you to create the Brainbase Kafka internal AI worker.
 
 At Brainbase, we work on a lot of fun and exciting things. Unfortunately, creating integrations isn't one of them, but it is something that has to get done, so we want to make it as easy on ourselves as possible.
 
-Your first task at Brainbase is to follow our motto and *make yourself useless.* by making an AI worker that can take over this integration creation from you, so you can work on better things that actually excite you.
+Your first task at Brainbase is to follow our motto and *make yourself useless* by making an AI worker that can take over this integration creation from you, so you can work on better things that actually excite you.
 
 ## Installing the template
 
