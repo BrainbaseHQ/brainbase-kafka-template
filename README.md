@@ -77,8 +77,27 @@ For Milestone 1, all you need to do is connect the provided application to the O
 For Milestone 2, you need to allow your basic chat app from Milestone 1 to create the correct file structure for a new app based on user instruction.
 
 #### Criteria
-- [ ] The OpenAI API is successfully set up.
-- [ ] The system is able to keep a conversation going.
+- [ ] Functions `read_file`, `create_file`, `write_into_file` and `list_files_in_workspace` are created
+- [ ] `read_file` logs out the contents of the file **with line numbers**, for example:
+```bash
+1. const { action_1 } = require('/actions/action_1.js');
+2. 
+3. export const app = {
+4.     name: '<app_name>', // e.g. 'google-calendar'
+5.     displayName: '<APP_NAME>', // e.g. 'Google Calendar'
+6.     authors: ['Kafka'],
+7. ...
+``` **This is very important for the next milestone.**
+- [ ] The necessary functions are created as [tools](https://platform.openai.com/docs/guides/function-calling)  
+- [ ] The file structure:
+```bash
+apps/
+└── <app_name>/
+    ├── index.js
+    └── actions/
+        └── <action_name>.js
+```
+is created. `index.js` should have the **exact** content of of `/boilerplate/index.js` and `actions/<action_name>.js` should have the **exact** content of `/boilerplate/actions/<action_name>.js`.
 
 
 Kafka provides a chat interface for you to explain what integration you want it to create and to nudge it along the way.
